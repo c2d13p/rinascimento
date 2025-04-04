@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Anton");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+:root {
+  --accent-clr-1: #90e0ef;
+  --accent-clr-2: #00b4d8;
+  --accent-clr-3: #0d0208;
+  --ff: "Roboto";
+  --form-fs: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem);
+  --form-ff: "Anton", sans-serif;
+  --title-fs: clamp(1.125rem, 0.9821rem + 0.7143vw, 1.625rem);
+  --paragraph-fs: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+}
+
+.elena {
+  --accent-clr-1: #246ee2;
+  --accent-clr-2: #2b375a;
+}
+
+.bambino {
+  --accent-clr-1: #00b4d8;
+  --accent-clr-2: #03045e;
+}
+
+.luna {
+  --accent-clr-1: #8c574d;
+  --accent-clr-2: #e2b8ac;
+}
+
+.luce {
+  --accent-clr-1: #e9bc7b;
+  --accent-clr-2: #bd5e34;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-color: var(--accent-clr-3);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  gap: 1em;
+  height: 100dvh;
+  justify-content: center;
+  margin: 0 auto;
+  width: min(100% - 1.6em, 900px);
+}
+
+img {
+  display: block;
+  margin-bottom: 0.5em;
+  max-height: 60%;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--form-ff);
+  gap: 1em;
+  justify-content: space-between;
+  padding: 1em;
+  width: min(100% - 4em, 600px);
+}
+
+input {
+  background-color: var(--accent-clr-3);
+  border: 1px solid var(--accent-clr-1);
+  border-radius: 100vmax;
+  color: var(--accent-clr-1);
+  flex: 1;
+  font-family: inherit;
+  font-size: var(--form-fs);
+  padding-block: 0.5em;
+  text-align: center;
+}
+
+input::placeholder {
+  color: var(--accent-clr-1);
+  opacity: 1;
+  text-align: center;
+}
+
+input:focus {
+  background-color: var(--accent-clr-2);
+  border-color: var(--accent-clr-1);
+  color: var(--accent-clr-1);
+  outline: none;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: var(--accent-clr-1);
+}
+
+button {
+  background-color: var(--accent-clr-1);
+  border: 1px solid var(--accent-clr-1);
+  border-radius: 100vmax;
+  color: var(--accent-clr-2);
+  cursor: pointer;
+  flex: 1;
+  font-family: inherit;
+  font-size: var(--form-fs);
+  padding-block: 0.5em;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--accent-clr-2);
+  color: var(--accent-clr-1);
+  outline: none;
+}
+
+button:disabled {
+  background-color: var(--accent-clr-2);
+  color: var(--accent-clr-1);
+  cursor: not-allowed;
+}
+
+h1,
+p {
+  color: var(--accent-clr-1);
+  font-family: var(--ff);
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--title-fs);
+  letter-spacing: 1px;
+  padding-bottom: 0.6em;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: var(--paragraph-fs);
+  line-height: 1.3;
+}

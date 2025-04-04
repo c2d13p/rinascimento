@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="New releases Kabo" />
+    <meta name="keywords" content="kabo, music" />
+    <meta property="og:title" content="NEW RELEASES KABO" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://c2d13p.github.io/rinascimento/kabo"
+    />
+    <meta property="og:image" content="icons/favicon.png" />
+    <meta property="og:description" content="New releases Kabo" />
+    <title>NEW RELEASES KABO</title>
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="icons/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="controlForm.js"></script>
+  </head>
+  <body>
+    <img src="images/cover elena-min.jpg" draggable="false" id="img" />
+    <h1>Grazie di essere qui stasera!</h1>
+    <p>Inserisci la tua email qui sotto per ricevere i brani in anteprima:</p>
+    <form method="POST">
+      <input type="email" placeholder="La tua @" id="email" />
+      <button class="button" id="send-button">Invia</button>
+    </form>
+
+    <!-- Hidden form for Google Forms submission -->
+    <form
+      id="hidden-form"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSee3bS1I1i9KfzyxU6wj9KVY5PqUyU6NxNwbZZBMoaawzOJ_w/formResponse?"
+      target="hidden_iframe"
+      style="display: none"
+    >
+      <input type="hidden" name="entry.744356002" id="hidden-entry" />
+      <input type="submit" value="Submit" />
+    </form>
+    <iframe
+      name="hidden_iframe"
+      id="hidden_iframe"
+      style="display: none"
+    ></iframe>
+  </body>
+</html>
