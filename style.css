@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+:root {
+  --bg-clr: #0d0208;
+  --ff: "Roboto";
+  --fs: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem);
+}
+
+body {
+  background-color: var(--bg-clr);
+}
