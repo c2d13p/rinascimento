@@ -1,11 +1,73 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-
 :root {
-  --bg-clr: #0d0208;
-  --ff: "Roboto";
-  --fs: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem);
+  --bg-clr: #000;
+  --ff: "Oswald";
+  --icon-bg-clr: rgba(255, 255, 255, 0.2);
+  --icon-bg-clr-active: rgba(255, 255, 255, 0.3);
+  --icon-clr: rgba(255, 255, 255, 0.6);
+  --icon-size: clamp(0.9375rem, 0.6696rem + 1.3393vw, 1.875rem);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   background-color: var(--bg-clr);
+  display: flex;
+  height: 100dvh;
+  margin: 0 auto;
+  max-width: 1440px;
+  position: relative;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  bottom: 1.5em;
+  display: flex;
+  gap: 1.5em;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+i {
+  color: var(--icon-clr);
+  font-size: var(--icon-size);
+}
+
+a,
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
+
+.round-button {
+  align-items: center;
+  background-color: var(--icon-bg-clr);
+  border-radius: 100vmax;
+  height: calc(var(--icon-size) * 2);
+  justify-content: center;
+  transition: transform 0.15s ease;
+  width: calc(var(--icon-size) * 2);
+}
+
+.round-button:hover {
+  background-color: var(--icon-bg-clr-active);
+}
+
+.round-button:active,
+.round-button:focus {
+  background-color: var(--icon-bg-clr-active);
+  outline: none;
+  transform: scale(0.95);
 }
