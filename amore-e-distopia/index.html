@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amore e Distopia</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Amore e Distopia</h1>
+      <p>▶ player personale</p>
+    </header>
+
+    <!-- Player -->
+    <div class="player">
+      <div class="now-playing-label">// ora in riproduzione</div>
+      <div class="now-playing-title" id="nowPlayingTitle">—</div>
+
+      <div class="progress-container">
+        <input
+          type="range"
+          class="progress-bar"
+          id="progressBar"
+          value="0"
+          min="0"
+          max="100"
+          step="0.1"
+        />
+        <div class="time-row">
+          <span id="timeElapsed">0:00</span>
+          <span id="timeRemaining">0:00</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="ctrl-btn" id="prevBtn" title="Precedente">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 6h2v12H6zm3.5 6 8.5 6V6z" />
+          </svg>
+        </button>
+        <button class="ctrl-btn play-btn" id="playBtn" title="Play/Pausa">
+          <svg
+            id="playIcon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M8 5v14l11-7z" />
+          </svg>
+          <svg
+            id="pauseIcon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            style="display: none"
+          >
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+          </svg>
+        </button>
+        <button class="ctrl-btn" id="nextBtn" title="Prossima">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M6 18l8.5-6L6 6v12zm2.5-6 5.5 3.9V8.1L8.5 12zM16 6h2v12h-2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Playlist -->
+    <div class="playlist-header">
+      <span>// scaletta</span>
+      <small>trascina per riordinare</small>
+    </div>
+    <div class="playlist" id="playlist"></div>
+
+    <audio id="audioPlayer"></audio>
+
+    <script src="player.js"></script>
+  </body>
+</html>
