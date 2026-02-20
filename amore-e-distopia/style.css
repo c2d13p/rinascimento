@@ -238,7 +238,7 @@ header p {
   transition:
     border-color 0.15s,
     background 0.15s;
-  touch-action: none;
+  touch-action: pan-y;
   user-select: none;
   -webkit-user-select: none;
 }
