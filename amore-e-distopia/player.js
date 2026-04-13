@@ -88,7 +88,7 @@ function renderPlaylist() {
         </svg>
       </div>
       <span class="song-num">${String(i + 1).padStart(2, "0")}</span>
-      <img src="/amore-e-distopia/covers/${song.label}.png" class="song-thumb" alt=""
+      <img src="covers/${song.label}.png" class="song-thumb" alt=""
         onerror="this.style.display='none'"
         onload="this.style.display=''"
         style="width:36px;height:36px;object-fit:cover;border:1px solid var(--border);border-radius:3px;flex-shrink:0;" />
@@ -143,7 +143,7 @@ function loadSong(autoplay = false) {
     nowPlayingCover.src = _img.src;
     nowPlayingCover.style.display = "";
   };
-  _img.src = `/amore-e-distopia/covers/${song.label}.png`;
+  _img.src = `covers/${song.label}.png`;
   progressBar.value = 0;
   timeElapsed.textContent = "0:00";
   timeRemaining.textContent = "0:00";
