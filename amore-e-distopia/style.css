@@ -366,3 +366,30 @@ header p {
   transform: rotate(-1deg);
   max-width: 300px;
 }
+
+/* Cover art */
+.cover-album {
+  width: min(420px, 94vw);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  display: block;
+  margin: 0 0 4px;
+  box-shadow: 0 0 40px rgba(230, 57, 70, 0.12);
+}
+
+.now-playing-cover {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+.song-item.active .now-playing-cover {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px var(--glow);
+}

@@ -37,6 +37,7 @@ const nowPlayingTitle = document.getElementById("nowPlayingTitle");
 const playBtn = document.getElementById("playBtn");
 const playIcon = document.getElementById("playIcon");
 const pauseIcon = document.getElementById("pauseIcon");
+const nowPlayingCover = document.getElementById("nowPlayingCover");
 
 // Load saved order from localStorage
 function loadOrder() {
@@ -87,6 +88,10 @@ function renderPlaylist() {
         </svg>
       </div>
       <span class="song-num">${String(i + 1).padStart(2, "0")}</span>
+      <img src="/amore-e-distopia/covers/${song.label}.png" class="song-thumb" alt=""
+        onerror="this.style.display='none'"
+        onload="this.style.display=''"
+        style="width:36px;height:36px;object-fit:cover;border:1px solid var(--border);border-radius:3px;flex-shrink:0;" />
       <span class="song-name">${song.label}</span>
       ${
         eqVisible
@@ -131,6 +136,14 @@ function loadSong(autoplay = false) {
   const song = songs[currentIndex];
   audio.src = `songs/${song.file}`;
   nowPlayingTitle.textContent = song.label;
+  nowPlayingCover.style.display = "none";
+  nowPlayingCover.src = "";
+  const _img = new Image();
+  _img.onload = () => {
+    nowPlayingCover.src = _img.src;
+    nowPlayingCover.style.display = "";
+  };
+  _img.src = `/amore-e-distopia/covers/${song.label}.png`;
   progressBar.value = 0;
   timeElapsed.textContent = "0:00";
   timeRemaining.textContent = "0:00";
