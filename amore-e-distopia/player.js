@@ -2,42 +2,28 @@ const STORAGE_KEY = "amore-distopia-order";
 
 // Song list - edit these to match your actual files
 const SONGS_BASE = [
-  { file: "atena-extra-dettaglio.mp3", label: "Atena (extra)" },
+  { file: "atena-extra-dettaglio.mp3", label: "Atena" },
   {
     file: "perla-in-dono-al-mare-extra-dettaglio.mp3",
-    label: "Perla in Dono al Mare (extra)",
+    label: "Perla in Dono al Mare",
   },
-  { file: "catàbasi.mp3", label: "Catàbasi" },
   {
     file: "nel-profondo-dell-universo-extra-dettaglio.mp3",
-    label: "Nel Profondo dell'Universo (extra)",
+    label: "Nel Profondo dell'Universo",
   },
-  { file: "il-puzzle-dei-tempi.mp3", label: "Il Puzzle dei Tempi" },
-  {
-    file: "amore-e-distopia-extra-dettaglio.mp3",
-    label: "Amore e Distopia (extra)",
-  },
+  { file: "catàbasi.mp3", label: "Catàbasi" },
   { file: "boomerang.mp3", label: "Boomerang" },
-  { file: "molla-la-presa.mp3", label: "Molla la Presa" },
   {
     file: "amore-santo.mp3",
     label: "Amore Santo",
   },
-  { file: "come-un-onda-extra-dettaglio.mp3", label: "Come un'Onda (extra)" },
-  { file: "atena-morbido.mp3", label: "Atena (morbido)" },
+  { file: "come-un-onda-extra-dettaglio.mp3", label: "Come un'Onda" },
+  { file: "molla-la-presa.mp3", label: "Molla la Presa" },
+  { file: "il-puzzle-dei-tempi.mp3", label: "Il Puzzle dei Tempi" },
   {
-    file: "perla-in-dono-al-mare-morbido.mp3",
-    label: "Perla in Dono al Mare (morbido)",
+    file: "amore-e-distopia-extra-dettaglio.mp3",
+    label: "Amore e Distopia",
   },
-  {
-    file: "nel-profondo-dell-universo-morbido.mp3",
-    label: "Nel Profondo dell'Universo (morbido)",
-  },
-  {
-    file: "amore-e-distopia-morbido.mp3",
-    label: "Amore e Distopia (morbido)",
-  },
-  { file: "come-un-onda-morbido.mp3", label: "Come un'Onda (morbido)" },
 ];
 
 let songs = [];
