@@ -2,26 +2,26 @@ const STORAGE_KEY = "amore-distopia-order";
 
 // Song list - edit these to match your actual files
 const SONGS_BASE = [
-  { file: "atena-extra-dettaglio.mp3", label: "Atena" },
+  { file: "01-atena.mp3", label: "Atena" },
   {
-    file: "perla-in-dono-al-mare-extra-dettaglio.mp3",
+    file: "02-perla-in-dono-al-mare.mp3",
     label: "Perla in Dono al Mare",
   },
   {
-    file: "nel-profondo-dell-universo-extra-dettaglio.mp3",
+    file: "03-nel-profondo-dell-universo.mp3",
     label: "Nel Profondo dell'Universo",
   },
-  { file: "catàbasi.mp3", label: "Catàbasi" },
-  { file: "boomerang.mp3", label: "Boomerang" },
+  { file: "04-catàbasi.mp3", label: "Catàbasi" },
+  { file: "05-boomerang.mp3", label: "Boomerang" },
   {
-    file: "amore-santo.mp3",
+    file: "06-amore-santo.mp3",
     label: "Amore Santo",
   },
-  { file: "come-un-onda-extra-dettaglio.mp3", label: "Come un'Onda" },
-  { file: "molla-la-presa.mp3", label: "Molla la Presa" },
-  { file: "il-puzzle-dei-tempi.mp3", label: "Il Puzzle dei Tempi" },
+  { file: "07-come-un-onda.mp3", label: "Come un'Onda" },
+  { file: "08-molla-la-presa.mp3", label: "Molla la Presa" },
+  { file: "09-il-puzzle-dei-tempi.mp3", label: "Il Puzzle dei Tempi" },
   {
-    file: "amore-e-distopia-extra-dettaglio.mp3",
+    file: "10-amore-e-distopia.mp3",
     label: "Amore e Distopia",
   },
 ];
