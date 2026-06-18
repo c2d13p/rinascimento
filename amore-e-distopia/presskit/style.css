@@ -27,6 +27,10 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* ---- FILO ROSSO VERTICALE ---- */
 .filo {
   position: fixed;
