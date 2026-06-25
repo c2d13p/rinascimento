@@ -206,7 +206,7 @@ a {
 
 .opening-quote .closing-quote {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 0.5rem;
   right: 0;
   font-size: 5rem;
   line-height: 1;
