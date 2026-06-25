@@ -122,14 +122,14 @@ a {
 }
 
 .album-title {
-  font-family: "Playfair Display", serif;
-  font-weight: 900;
+  font-family: "Bebas Neue", sans-serif;
   font-size: clamp(2.8rem, 8vw, 4.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.02em;
-  color: var(--bianco);
-  margin-bottom: 0.6rem;
-  position: relative;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: #e63946;
+  text-shadow:
+    0 0 30px rgba(200, 25, 42, 0.4),
+    0 0 60px rgba(200, 25, 42, 0.4);
 }
 
 /* Effetto "e" in corsivo rosso */
@@ -188,18 +188,31 @@ a {
   line-height: 1.55;
   color: var(--bianco);
   text-align: center;
-  padding: 0 0.5rem 3.5rem;
+  padding: 2.5rem 2rem 5rem;
   position: relative;
 }
 
 .opening-quote::before {
   content: "\201C";
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
   font-size: 5rem;
-  line-height: 0;
-  vertical-align: -2rem;
+  line-height: 1;
   color: var(--rosso);
   opacity: 0.5;
-  margin-right: 0.1em;
+  font-style: normal;
+}
+
+.opening-quote .closing-quote {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 0;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--rosso);
+  opacity: 0.5;
+  font-style: normal;
 }
 
 .body-text {
