@@ -378,3 +378,153 @@ header p {
   margin: 0 0 4px;
   box-shadow: 0 0 40px rgba(230, 57, 70, 0.12);
 }
+
+/* Support / Donations */
+.support {
+  width: min(420px, 94vw);
+  text-align: center;
+  margin: 8px 0 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.support-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.35em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.support-text {
+  font-size: 0.8rem;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 18px;
+  opacity: 0.85;
+}
+
+.support-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.support-btn {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 10px 18px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--accent2);
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    border-color 0.15s,
+    background 0.15s,
+    box-shadow 0.15s;
+}
+
+.support-btn:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 16px var(--glow);
+}
+
+.support-btn.kofi {
+  color: var(--accent2);
+}
+
+/* Crypto modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  width: min(380px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 0 40px rgba(230, 57, 70, 0.15);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--text);
+}
+
+.crypto-row {
+  margin: 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.crypto-name {
+  display: block;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1rem;
+  color: var(--accent2);
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.crypto-address {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text);
+  word-break: break-all;
+  background: var(--card);
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+
+.copy-btn {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.crypto-note {
+  font-size: 0.65rem;
+  color: var(--muted);
+  margin-top: 10px;
+}

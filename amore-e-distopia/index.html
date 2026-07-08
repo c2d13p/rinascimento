@@ -85,6 +85,65 @@
 
     <audio id="audioPlayer"></audio>
 
+    <section class="support">
+      <div class="support-label">// supporta il progetto</div>
+      <p class="support-text">
+        Se questo album ti ha lasciato qualcosa e desideri sostenere il mio
+        lavoro, puoi farlo ❤️
+      </p>
+      <div class="support-actions">
+        <a
+          href="https://ko-fi.com/simonegalassi"
+          target="_blank"
+          rel="noopener"
+          class="support-btn kofi"
+        >
+          Dona su Ko-fi
+        </a>
+        <button class="support-btn crypto" id="cryptoBtn">
+          Dona in cripto
+        </button>
+      </div>
+    </section>
+
+    <div class="modal-overlay" id="cryptoModal">
+      <div class="modal-box">
+        <button class="modal-close" id="cryptoClose">&times;</button>
+        <div class="now-playing-label">// dona in cripto</div>
+        <div class="crypto-row">
+          <span class="crypto-name">Bitcoin (BTC)</span>
+          <code class="crypto-address" id="btcAddress"
+            >bc1q60t2yzhk2dn3cy7qjjfdd0nhtdytyyt8fjkx9a</code
+          >
+          <button class="copy-btn" data-copy="btcAddress">copia</button>
+        </div>
+        <div class="crypto-row">
+          <span class="crypto-name">Ethereum (ETH)</span>
+          <code class="crypto-address" id="ethAddress"
+            >0xd9ACF11e461e61867dEdE1fC2c6140Ba1079EDd7</code
+          >
+          <button class="copy-btn" data-copy="ethAddress">copia</button>
+        </div>
+        <div class="crypto-row">
+          <span class="crypto-name">Solana (SOL)</span>
+          <code class="crypto-address" id="solAddress"
+            >143ATSMkbjhTLJVStrpTDTMkB2R2eeugEc1Fb8TZpXKM</code
+          >
+          <button class="copy-btn" data-copy="solAddress">copia</button>
+        </div>
+        <div class="crypto-row">
+          <span class="crypto-name">USDT (Tron)</span>
+          <code class="crypto-address" id="usdtAddress"
+            >TBRzWZ9wt4T3hgS5FbntyyS9tjYjwfXhDj</code
+          >
+          <button class="copy-btn" data-copy="usdtAddress">copia</button>
+        </div>
+        <p class="crypto-note">
+          Verifica sempre la rete prima di inviare fondi.
+        </p>
+      </div>
+    </div>
+
     <script src="player.js"></script>
   </body>
 </html>

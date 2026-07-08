@@ -317,3 +317,29 @@ renderPlaylist();
 if (songs.length > 0) {
   nowPlayingTitle.textContent = songs[0].label;
 }
+
+// ── Support modal ──────────────────────────────────────────────────────
+const cryptoBtn = document.getElementById("cryptoBtn");
+const cryptoModal = document.getElementById("cryptoModal");
+const cryptoClose = document.getElementById("cryptoClose");
+
+if (cryptoBtn) {
+  cryptoBtn.addEventListener("click", () => cryptoModal.classList.add("open"));
+  cryptoClose.addEventListener("click", () =>
+    cryptoModal.classList.remove("open"),
+  );
+  cryptoModal.addEventListener("click", (e) => {
+    if (e.target === cryptoModal) cryptoModal.classList.remove("open");
+  });
+}
+
+document.querySelectorAll(".copy-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const el = document.getElementById(btn.dataset.copy);
+    navigator.clipboard.writeText(el.textContent.trim()).then(() => {
+      const original = btn.textContent;
+      btn.textContent = "copiato!";
+      setTimeout(() => (btn.textContent = original), 1500);
+    });
+  });
+});
