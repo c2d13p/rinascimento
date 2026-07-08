@@ -33,6 +33,7 @@ let dragSrcIndex = null;
 let ghost = null;
 let touchOffsetX = 0;
 let touchOffsetY = 0;
+let reorderMode = false;
 
 const audio = document.getElementById("audioPlayer");
 const playlist = document.getElementById("playlist");
@@ -43,6 +44,16 @@ const nowPlayingTitle = document.getElementById("nowPlayingTitle");
 const playBtn = document.getElementById("playBtn");
 const playIcon = document.getElementById("playIcon");
 const pauseIcon = document.getElementById("pauseIcon");
+const reorderToggle = document.getElementById("reorderToggle");
+
+reorderToggle.addEventListener("click", () => {
+  reorderMode = !reorderMode;
+  reorderToggle.classList.toggle("active", reorderMode);
+  reorderToggle.textContent = reorderMode
+    ? "fine riordino"
+    : "tocca per riordinare";
+  playlist.classList.toggle("reorder-mode", reorderMode);
+});
 
 // Load saved order from localStorage
 function loadOrder() {
@@ -107,6 +118,7 @@ function renderPlaylist() {
 
     // Click to play (not on handle)
     item.addEventListener("click", (e) => {
+      if (reorderMode) return;
       if (e.target.closest("[data-handle]")) return;
       if (i === currentIndex) {
         togglePlay();

@@ -528,3 +528,46 @@ header p {
   color: var(--muted);
   margin-top: 10px;
 }
+
+.reorder-toggle {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 4px 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  opacity: 0.6;
+  transition:
+    border-color 0.15s,
+    color 0.15s,
+    opacity 0.15s;
+}
+
+.reorder-toggle:hover {
+  opacity: 1;
+  border-color: var(--muted);
+}
+
+.reorder-toggle.active {
+  color: var(--accent2);
+  border-color: var(--accent);
+  opacity: 1;
+  box-shadow: 0 0 10px var(--glow);
+}
+
+/* Drag handle nascosta di default */
+.drag-handle {
+  display: none;
+}
+
+.playlist.reorder-mode .drag-handle {
+  display: flex;
+}
+
+.playlist.reorder-mode .song-item {
+  border-color: var(--muted);
+}
